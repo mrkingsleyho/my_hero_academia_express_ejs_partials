@@ -1,0 +1,26 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="blogs content">
+    <h2>My Hero Academia Main Characters</h2>
+
+    <% if (my_hero_academia.length > 0) { %>
+      <% my_hero_academia.forEach(my_hero_academia => { %>
+      
+        <h3 class="title"><%= my_hero_academia.character %></h3>
+        <p class="snippet"><%= my_hero_academia.quirk %></p>
+        
+
+      <% }) %>
+    <% } else { %>
+      <p>There are no blogs to display...</p>
+    <% } %>
+    
+  </div>
+
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>
